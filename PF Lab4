@@ -1,0 +1,163 @@
+Task 4:
+#include <stdio.h>
+
+int main() {
+	int score;
+	printf("Enter score from 0 to 100: ");
+	scanf("%d", &score);
+	
+	if (score >= 90) {
+		printf("A");
+	} else if (score >= 80) {
+		printf("B");
+	} else if (score >= 70) {
+		printf("C");
+	} else if (score >= 60) {
+		printf("D");
+	} else {
+		printf("F");
+	}
+	
+	return 0;
+}
+
+Task 5:
+#include <stdio.h>
+
+int main() {
+	int color;
+	printf("Enter color number: ");
+	scanf("%d", &color);
+	switch (color) {
+		case 1:
+			printf("Stop");
+			break;
+		case 2:
+			printf("Ready");
+			break;
+		case 3:
+			printf("Go");
+	}
+	
+	
+	return 0;
+}
+
+Task 6:
+#include <stdio.h> 
+
+int main() {
+	int num1, num2;
+	char oper;
+	
+	printf ("Enter the first number: ");
+	scanf("%d", &num1);
+	printf ("\nEnter the second number: ");
+	scanf("%d", &num2);
+	printf("Enter operator: ");
+	scanf(" %c", &oper);
+	
+	switch (oper) {
+		case '+':
+			printf("Result is %d", num1 + num2);
+			break;
+			
+		case '-':
+			printf("Result is %d", num1 - num2);
+			break;
+			
+		case '*':
+			printf("Result is %d", num1 * num2);
+			break;
+			
+		case '/':
+			printf("Result is %f", float(num1) / num2);
+			break;			
+	}
+	
+	
+	return 0;
+}
+
+Task 7:
+#include <stdio.h>
+
+int main() {
+	int year;
+	printf("Enter year: ");
+	scanf("%d", &year);
+	
+	if ((year % 4 == 0) && (year % 100 != 0)) {
+		printf("\nIt is a leap year");
+		} else {
+			if ((year % 4 == 0) && (year % 100 == 0) && (year % 400 == 0)) {
+				printf("\nIt is a leap year");
+			} else {
+				printf("Not a leap year");
+			}
+		}
+		
+	
+
+	
+	return 0;
+}
+
+Task 8:
+#include <stdio.h>
+
+int main() {
+	int num;
+	printf("Enter number: ");
+	scanf("%d", &num);
+	
+	if (num > 0) {
+		printf("\nPositive number");
+	} else if (num < 0) {
+		printf("\nNegative number");
+	} else {
+		printf("\nNumber is zero");
+	}
+	
+	return 0;
+}
+
+Task 9:
+
+#include <stdio.h>
+
+int main() {
+	int num;
+	printf("Enter number: ");
+	scanf("%d", &num);
+	
+	if (num > 0) {
+		printf("\nPositive number");
+	} else if (num < 0) {
+		printf("\nNegative number");
+	} else {
+		printf("\nNumber is zero");
+	}
+	
+	return 0;
+}
+
+Task 10:
+
+#include <stdio.h>
+
+int main() {
+	int realPass, passInput;
+	realPass = 5123;
+	printf("Enter password: ");
+	scanf("%d", &passInput);
+	if (passInput == realPass) {
+		printf("\nAccess Granted");
+	} else {
+		printf("Access Denied");
+	}
+	
+	return 0;
+}
+
+
