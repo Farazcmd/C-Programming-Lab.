@@ -68,3 +68,63 @@ printf("\nPrime number count is %d", primeCount);
 	return 0;
 }
 ```
+
+### Task 3
+
+```
+#include <stdio.h>
+
+int main() {
+	
+	int first = 0;
+	int second = 1;
+	
+	int nnn, next;
+	printf("How many terms of fibonacci sequence to display?: ");
+	scanf("%d", &nnn);
+	
+	for (int i = 0; i < 10; i++) {
+		if (i == 0) {
+			printf("\n%d", 0);
+		} else if (i == 1) {
+			printf(" %d", 1);
+		} else {
+			next = first + second;
+			first = second;
+			second = next;
+			printf(" %d", next);
+		}
+		
+	}
+	
+	
+	return 0;
+}
+```
+
+###Task 4
+
+```
+#include <stdio.h>
+
+int main() {
+	
+	char charInput;
+	int vowelCount = 0;
+	int consCount = 0;
+	do {
+		printf("Enter an alphabet character: ");
+		scanf(" %c", &charInput);
+		if ((charInput == 'a') || (charInput == 'A') || (charInput == 'e') || (charInput == 'E') || (charInput == 'i') || (charInput == 'I') || (charInput == 'o') || (charInput == 'O') || (charInput == 'u') || (charInput == 'U')) {
+			vowelCount += 1;
+		} else {
+			consCount += 1;
+		}
+		printf("\nDo you want to continue? (y for yes / n for no)");
+		scanf(" %c", &charInput);
+	} while (charInput != 'n'); 
+	printf("Amount of vowels entered: %d", vowelCount);
+	printf("Amount of consonants entered: %d", consCount);
+	return 0;
+}
+```
