@@ -100,7 +100,7 @@ int main() {
 }
 ```
 
-###Task 4
+### Task 4
 
 ```
 #include <stdio.h>
@@ -123,6 +123,257 @@ int main() {
 	} while (charInput != 'n'); 
 	printf("Amount of vowels entered: %d", vowelCount);
 	printf("Amount of consonants entered: %d", consCount);
+	return 0;
+}
+```
+
+### Task 5
+
+```
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+	 
+
+	int nnn; 
+
+	printf("Which number's factorial do you want?: "); 
+
+	scanf("%d", &nnn); 
+
+	 
+
+	for (int i = nnn - 1; i > 1; i--) { 
+
+		nnn = nnn * i; 
+
+	} 
+
+	printf("\nFactorial is %d", nnn); 
+
+	 
+
+	return 0; 
+
+} 
+```
+
+### Task 6
+
+```
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+	 
+
+	int sum = 0, above70 = 0, below50 = 0, between = 0, count = 0; 
+
+	int grade; 
+
+		 
+
+	printf("Enter grade between 0 and 100 inclusive, -1 to stop:  "); 
+
+	scanf("%d", &grade); 
+
+	 
+
+	while (grade != -1) { 
+
+		printf("\nYou entered grade %d", grade); 
+
+		count += 1; 
+
+		sum += grade; 
+
+		if (grade > 70) { 
+
+			above70 += 1; 
+
+		} else if (grade < 50) { 
+
+			below50 += 1; 
+
+		} else { 
+
+			between += 1; 
+
+		} 
+
+		printf("\nEnter grade between 0 and 100 inclusive, -1 to stop:  "); 
+
+		scanf("%d", &grade); 
+
+	} 
+
+	printf("\nAmount of grades above 70: %d", above70); 
+
+	printf("\nAmount of grades between 50 and 70 inslusive: %d", between); 
+
+	printf("\nAmount of grades below 50: %d", below50); 
+
+	printf("\nAverage of grades is: %f", ((float)sum / count)); 
+
+	printf("\nAmount of grades entered is: %d", count); 
+
+	return 0; 
+
+} 
+```
+
+### Task 7
+
+```
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+	 
+
+	int depositCount = 0, withdrawCount = 0; 
+
+	int balance = 5000; 
+
+	int transaction; 
+
+	 
+
+	printf("Enter positive amount for deposit and negative for withdrawal, 0 to stop: "); 
+
+	scanf("%d", &transaction); 
+
+	 
+
+	while (transaction != 0) { 
+
+		if (transaction > 0) { 
+
+			depositCount += 1; 
+
+		} else { 
+
+			withdrawCount += 1; 
+
+		} 
+
+		balance += transaction; 
+
+		printf("\nNew balance is %d", balance); 
+
+		printf("\nEnter positive amount for deposit and negative for withdrawal, 0 to stop: "); 
+
+		scanf("%d", &transaction); 
+
+	} 
+
+	 
+
+	printf("\nFinal balance is %d", balance); 
+
+	printf("\nAmount of withdrawals is %d", withdrawCount); 
+
+	printf("\nAmount of deposits is %d", depositCount); 
+
+	 
+
+	return 0; 
+
+} 
+```
+
+### Task 8
+
+```
+#include <stdio.h>
+
+int main() {
+	
+	int numTable;
+	printf("Which number to print table of ?: ");
+	scanf("%d", &numTable);
+	
+	for (int i = 1; i <= 10; i++) {
+		printf("\n%d x %d = %d", numTable, i, numTable * i);
+		
+	}
+	
+	
+	return 0;
+}
+```
+
+### Task 9
+
+```
+#include <stdio.h>
+
+int main() {
+	
+	int largest = 0, minimum = 9999999;
+	int num;
+	char choice;
+	
+	do {
+	
+		printf("Enter number: ");
+		scanf("%d", &num);
+		
+		if (num > largest) {
+			largest = num;
+		} 
+		if (num < minimum) {
+			minimum = num;
+		}
+		printf("\nMinimum number is %d", minimum);
+		printf("\nLargest number is %d", largest);
+		
+		printf("\nDo you want to continue? (y/n): ");
+		scanf(" %c", &choice);
+	
+	} while (choice != 'n');
+	
+	printf("\nLargest number is %d", largest);
+	printf("\nMinimum number is %d", minimum);
+	
+	return 0;
+}
+```
+
+### Task 10
+
+```
+#include <stdio.h>
+
+int main() {
+	
+	int num, sum = 0;
+	char choice;
+	
+	printf("\nEnter number: ");
+	scanf("%d", &num);
+	
+	sum += num;
+	printf("\nDo you want to enter another number? (y/n): ");
+	scanf(" %c", &choice);
+	
+	while (choice != 'n') {
+		printf("\nEnter number: ");
+		scanf("%d", &num);
+	
+		sum += num;
+		printf("\nDo you want to enter another number? (y/n): ");
+		scanf(" %c", &choice);
+	}
+	printf("\nFinal sum is %d", sum);
+	
 	return 0;
 }
 ```
