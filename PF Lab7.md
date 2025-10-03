@@ -1,40 +1,41 @@
 ### Task 1
 
 ```
-#include <stdio.h>
-
-int main() {
-	int evenCount, oddCount, num;
-	char choice;
- 	do {
- 		printf("Enter number: ");
- 		scanf("%d", &num);
- 		
- 		if (num % 2 == 0) {
-			evenCount += 1;
-			printf("Even number");
-		} else {
-			oddCount += 1;
-			printf("Odd number");
-		}
- 		
- 		printf("\nDo you want to continue? (y for yes / n for no): ");
- 		scanf(" %c", &choice);
-
-	} while (choice == 'y');
- 	
- 	printf("Amount of even numbers: %d", evenCount);
- 	printf("Amount of odd numbers: %d", oddCount);
-
- 	return 0;
-}
+#include <stdio.h> 
+ 
+int main() { 
+	int num; 
+	int oddCount = 0;
+	int evenCount = 0;
+	char choice; 
+	do { 
+		printf("Enter number: "); 
+		scanf("%d", &num); 
+		 
+		if (num % 2 == 0) { 
+			evenCount += 1; 
+			printf("Even number"); 
+		} else { 
+			oddCount += 1; 
+			printf("Odd number"); 
+		} 
+		 
+		printf("\nDo you want to continue? (y for yes / n for no): "); 
+		scanf(" %c", &choice); 
+ 
+	} while (choice == 'y'); 
+	 
+	printf("Amount of even numbers: %d", evenCount); 
+	printf("\nAmount of odd numbers: %d", oddCount); 
+ 
+	return 0; 
+} 
 ```
 
 ### Task 2
 
 ```
 #include <stdio.h>
-
 int main() {
 
 int nnn;
@@ -43,8 +44,8 @@ int count = 0;
 int primeCount = 0;
 printf("Enter limit: ");
 scanf("%d", &nnn);
-int i;
-int j;
+int i, j;
+
 for (i = 1; i <= nnn; i++) {
 	
 	for (j = 1; j <= i; j++) {
@@ -62,9 +63,6 @@ for (i = 1; i <= nnn; i++) {
 
 printf("\nSum is %d", sum);
 printf("\nPrime number count is %d", primeCount);
-
-
-
 	return 0;
 }
 ```
