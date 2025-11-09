@@ -1,4 +1,112 @@
-Task 4
+### Task 1
+
+```
+#include <stdio.h>
+
+int main() {
+	
+	int myArray[3][3];
+	bool symm = true;
+	
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			printf("Enter element of row %d column %d\n", i+1, j+1);
+			scanf("%d", &myArray[i][j]);
+		}
+	}
+	
+	int i = 0, j = 0;
+	while ((i < 3) && (symm)) {
+		j = 0;
+		while ((j < 3) && (symm)) {
+			if (myArray[i][j] != myArray[j][i]) {
+				symm = false;
+			}
+			j +=1;
+		}
+		i +=1;
+	}
+	
+	if (symm) {
+		printf("Array is symmetric");
+	} else {
+		printf("Array is not symmetric");
+	}
+	
+	return 0;
+}
+
+```
+
+### Task 2
+
+```
+#include <stdio.h>
+
+int main() {
+	
+	int spaces = 8;
+	int num = 2;
+	
+	for (int k = 0; k < 5; k++) {
+	
+		for (int i = 0; i < spaces; i++) {
+			printf(" ");
+		}
+		spaces -= 2;
+		for (int j = 1; j < num; j++) {
+			printf("%d ", j);
+		}
+		num+= 1;
+	printf("\n");
+}
+	
+	return 0;
+}
+```
+
+### Task 3
+
+```
+#include <stdio.h>
+
+int main() {
+	int n;
+	printf("Enter square matrix length: ");
+	scanf("%d", &n);
+	int matrix[n][n];
+	
+	for (int i = 0; i < n; i ++) {
+		for (int j = 0; j < n; j++) {
+			printf("Enter element of row %d column %d: ", i+1, j+1);
+			scanf("%d", &matrix[i][j]);
+		}
+	}
+	
+	int diag1 = 0, diag2 = 0;
+	
+	for (int i = 0; i < n; i++) {
+		diag1 += matrix[i][i];
+		diag2 += matrix[i][n-1-i];
+	}
+	
+	printf("\ndiagonal 1 sum is %d", diag1);
+	printf("\ndiagonal 2 sum is %d", diag2);
+	
+	int sum = 0;
+	
+	sum = diag1 + diag2;
+	
+	if (n%2 == 1) {
+		sum -= matrix[n/2][n/2];
+		
+	}
+	printf("\nsum is %d", sum);
+	return 0;
+}
+```
+
+### Task 4
 
 ```
 #include <stdio.h>
@@ -28,7 +136,7 @@ int main() {
 
 ```
 
-Task 5
+### Task 5
 
 ```
 #include <stdio.h>
@@ -68,7 +176,7 @@ int main() {
 
 ```
 
-Task 6
+### Task 6
 
 ```
 #include <stdio.h>
@@ -112,7 +220,7 @@ int main() {
 
 ```
 
-Task 7
+### Task 7
 
 ```
 #include <stdio.h>
@@ -162,7 +270,7 @@ int main() {
 
 ```
 
-Task 8
+### Task 8
 
 ```
 #include <stdio.h>
@@ -210,7 +318,7 @@ int main() {
 
 ```
 
-Task 9
+### Task 9
 
 ```
 #include <stdio.h>
@@ -264,7 +372,7 @@ int main() {
 
 ```
 
-Task 10
+### Task 10
 
 ```
 #include <stdio.h>
